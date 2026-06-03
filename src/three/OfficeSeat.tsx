@@ -33,20 +33,20 @@ export default function OfficeSeat({ object, selected, highlighted, mode, onSele
       onClick={(event) => { event.stopPropagation(); onSelect(object.id); }}
       onPointerDown={onPointerDown}
     >
-      <group opacity={disabled ? 0.48 : 1}>
+      <group>
         <SelectionRing radius={0.54} color={highlighted ? '#ffd76a' : '#2f8cff'} active={selected || highlighted} y={0.05} />
         <OfficeDesk color="#f3bd78" scale={0.72} />
         <mesh castShadow receiveShadow position={[0, 0.24, 0.45]}>
           <boxGeometry args={[0.42, 0.13, 0.38]} />
-          <meshStandardMaterial color={color} roughness={0.72} flatShading />
+          <meshStandardMaterial color={color} roughness={0.72} flatShading transparent={disabled} opacity={disabled ? 0.48 : 1} />
         </mesh>
         <mesh castShadow receiveShadow position={[0, 0.47, 0.58]}>
           <boxGeometry args={[0.42, 0.32, 0.1]} />
-          <meshStandardMaterial color={color} roughness={0.72} flatShading />
+          <meshStandardMaterial color={color} roughness={0.72} flatShading transparent={disabled} opacity={disabled ? 0.48 : 1} />
         </mesh>
         <mesh castShadow position={[0.38, 0.18, -0.22]}>
           <sphereGeometry args={[0.07, 12, 8]} />
-          <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.18} roughness={0.6} flatShading />
+          <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.18} roughness={0.6} flatShading transparent={disabled} opacity={disabled ? 0.48 : 1} />
         </mesh>
         {status === 'occupied' && <OfficeAgent workStatus={object.workStatus} selected={selected} highlighted={highlighted} />}
         {status !== 'occupied' && <StatusBubble label={seatText[status]} color={color} position={[0.36, 1.05, 0]} visible={selected || highlighted || status === 'reserved'} />}
