@@ -14,11 +14,13 @@
     "typescript": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "konva": "latest",
-    "react-konva": "latest"
+    "three": "latest",
+    "@react-three/fiber": "latest",
+    "@react-three/drei": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "@types/three": "latest"
   }
 }
