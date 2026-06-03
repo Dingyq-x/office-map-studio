@@ -4,6 +4,7 @@ export type SpaceType = 'office' | 'meeting_room' | 'front_desk' | 'pantry' | 'w
 export type FurnitureType = 'desk' | 'chair' | 'meeting_table' | 'sofa' | 'plant' | 'printer' | 'door';
 export type SeatType = 'normal' | 'manager' | 'empty' | 'reserved';
 export type SeatStatus = 'available' | 'occupied' | 'reserved' | 'disabled';
+export type WorkStatus = 'working' | 'idle' | 'meeting' | 'away' | 'focus' | 'offline';
 
 export interface MapObject {
   id: string;
@@ -21,6 +22,7 @@ export interface MapObject {
   employeeName?: string;
   department?: string;
   status?: SeatStatus;
+  workStatus?: WorkStatus;
   note?: string;
 }
 
