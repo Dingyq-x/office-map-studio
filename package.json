@@ -13,14 +13,10 @@
     "vite": "latest",
     "typescript": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "three": "latest",
-    "@react-three/fiber": "latest",
-    "@react-three/drei": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@types/three": "latest"
+    "@types/react-dom": "latest"
   }
 }
