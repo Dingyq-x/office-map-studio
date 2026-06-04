@@ -87,12 +87,12 @@ export default function App() {
     setHighlightedObjectId(object.id);
   };
 
-  const exportPng = () => {
+  const exportMapImage = () => {
     const dataUrl = canvasRef.current?.toDataURL();
     if (!dataUrl) return;
     const link = document.createElement('a');
     link.href = dataUrl;
-    link.download = 'office-map-studio.png';
+    link.download = 'office-map-studio.svg';
     link.click();
     showToast('虚拟办公室图片已导出');
   };
@@ -127,7 +127,7 @@ export default function App() {
           showToast('布局已保存到 localStorage');
         }}
         onReset={() => setConfirm({ type: 'reset' })}
-        onExport={exportPng}
+        onExport={exportMapImage}
         onZoomChange={setZoom}
         onResetView={() => {
           setZoom(1);

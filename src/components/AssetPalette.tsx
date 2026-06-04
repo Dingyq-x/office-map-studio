@@ -15,7 +15,7 @@ const groups: { title: string; hint: string; assets: AssetTemplate[] }[] = [
   },
   {
     title: '玩具家具',
-    hint: '全部由 Three.js 几何体组合，无外部图片素材',
+    hint: '全部由内联 SVG 图形组合，无外部图片素材',
     assets: [
       { id: 'desk', name: '办公桌', description: '带桌面厚度', kind: 'furniture', defaults: { label: '办公桌', width: 96, height: 56, color: '#d99058', furnitureType: 'desk', rotation: 0 } },
       { id: 'chair', name: '椅子', description: '靠背与坐垫', kind: 'furniture', defaults: { label: '椅子', width: 48, height: 48, color: '#75a9ff', furnitureType: 'chair', rotation: 0 } },
